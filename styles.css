@@ -1,0 +1,70 @@
+/* Container for the entire section with the video background */
+.videoBackgroundContainer {
+  position: relative; /* Allows contentOverlay to be positioned absolutely relative to this */
+  width: 100vw; /* Take full viewport width */
+  height: 100vh; /* Take full viewport height */
+  overflow: hidden; /* Hide any overflow from the video */
+  display: flex; /* Helps center content if needed */
+  align-items: center;
+  justify-content: center;
+  /* Optional: Add a dark overlay to make text more readable */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+/* Styles for the video element itself */
+.video {
+  position: absolute; /* Position the video absolutely */
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Ensure video covers at least the full width */
+  min-height: 100%; /* Ensure video covers at least the full height */
+  width: auto;
+  height: auto;
+  z-index: -1; /* Send the video to the very back, behind all other content */
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  /* Optional: Enhance contrast if video is too bright */
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Styles for the content that sits on top of the video */
+.contentOverlay {
+  position: relative; /* Or absolute, depending on how you want to center */
+  z-index: 1; /* Ensure content is above the video */
+  color: white; /* Ensure your text is visible against a dark background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adds readability */
+  width: 100%; /* Take full width of parent */
+  height: 100%; /* Take full height of parent */
+  display: flex; /* Use flexbox to center your existing content */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Your existing styles (or move them here from inline if you prefer) */
+.kevinsTint {
+  font-size: 86px;
+  font-family: var(--font-hammersmith-one), sans-serif;
+  text-transform: uppercase;
+}
+
+.carWindowTinting {
+  font-size: 29px;
+  font-family: var(--font-hammersmith-one), sans-serif;
+}
+
+/* Moved from inline styles for better practice */
+.textCenter {
+    text-align: center;
+    margin-top: -140px; /* Adjust this value as needed based on your layout */
+}
+
+.inlineBlockBorder {
+    display: inline-block;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}

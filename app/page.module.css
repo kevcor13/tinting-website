@@ -1,0 +1,117 @@
+/* page.module.css */
+
+/* --- Default Styles (for larger screens / desktop first) --- */
+.imageBackgroundContainer {
+    width: 100vw;
+    height: 80vh; /* Changed to 100vh for desktop */
+    background-image: url("/assets/images/backWindow.PNG"); /* Your background image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+.contentOverlay {
+
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.centerFlexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentFlexColumn img{
+    width:180; /* Make image responsive to its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.iconContainer{
+    display: flex;
+    height: 30;
+    width: 40;
+  }
+.textAlignCen {
+    text-align: center;
+}
+
+.bottomBorderDiv {
+    display: inline-block;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.kevinsTintText {
+    font-size: 86px; /* Default large size for desktop */
+    font-family: var(--font-hammersmith-one), sans-serif;
+    text-transform: uppercase;
+    line-height: 1; /* Adjust line-height to prevent excessive spacing */
+}
+
+.carWindowTintingText {
+    font-size: 29px; /* Default size for desktop */
+    font-family: var(--font-hammersmith-one), sans-serif;
+}
+
+/* --- Second Section Styles --- */
+.imageOverviewContainer {
+    position: relative;
+    padding: 20px;
+    margin: 20px; /* Corrected: added 'px' unit */
+    text-align: center; /* Center the image and text inside */
+}
+
+/* --- Media Queries for Mobile Screens (e.g., iPhone portrait) --- */
+@media (max-width: 400px) { /* Adjust breakpoint if needed (e.g., 600px, 480px) */
+
+    /* Reduce font sizes for readability on smaller screens */
+    .kevinsTintText {
+        font-size: 40px; /* Significantly smaller for mobile */
+        line-height: 1.1; /* Adjust line-height again */
+    }
+
+    .carWindowTintingText {
+        font-size: 20px; /* Smaller for mobile */
+    }
+
+    /* Adjust negative margin or remove it if it causes issues on mobile */
+    .textAlignCen {
+        margin-top: -6 0px; /* Reduce negative margin for mobile, test this value */
+        /* Or simply: margin-top: 20px; if the negative margin is problematic */
+    }
+
+    /* Adjust image overview container for mobile */
+    .imageOverviewContainer {
+        padding: 10px; /* Less padding */
+        margin: 10px; /* Less margin */
+    }
+
+    .imageOverviewContainer img {
+        border-radius: 70;
+        width: 100%; /* Make image responsive to its container */
+        height: 80%; /* Maintain aspect ratio */
+    }
+    .TitleText{
+        font-size:36px; /* Smaller title text for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
+        margin-bottom: 20;
+    }
+    .textBody{
+        font-size: 20px; /* Smaller body text for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for body text */
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
