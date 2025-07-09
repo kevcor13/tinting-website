@@ -100,8 +100,37 @@
     }
     .textBody{
         font-size: 20px; /* Smaller body text for mobile */
-        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for body text */
+        font-family: var(--font-oswald), sans-serif; /* Use Geist Sans for body text */
         margin-top: 20px;
         margin-bottom: 40px;
+    }
+    .titleText{
+        font-size:36px; /* Smaller title text for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
+        margin-bottom: 20;
+    }
+    .header {
+        text-align: center; /* Center the header text */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+    .fullGalleryContainer{
+        display: flex;       
+        justify-content: center;
+        margin-bottom: 20;
+    }
+    .galleryHeader{
+        border-top: #FFFFFF 2px solid;
+        text-align: center; /* Center the header text */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+    .galleryTitle{
+        margin-top: 40px;
+        font-size: 36px; /* Smaller title text for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
+        margin-bottom: 20;
+    }
+    .galleryText{
+        font-size: 20px; /* Smaller body text for mobile */
+        font-family: var(--font-oswald), sans-serif; /* Use Geist Sans for body text */
     }
 }

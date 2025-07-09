@@ -8,10 +8,38 @@
         font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
         margin-bottom: 20;
     }
+    .content{
+        padding: 10;
+        padding-left: 20;
+        padding-right: 20;
+    }
     .header img {
         border-radius: 40;
         width: 100%; /* Make image responsive to its container */
-        height: 80%; /* Maintain aspect ratio */
+        height: 20%; /* Maintain aspect ratio */
         padding: 20;
+    }
+    .serviceTitle{
+        font-size: 30px; /* Smaller service title for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for service title */
+        margin-bottom: 10px; /* Add some space below the service title */
+    }
+    .description{
+        font-size: 20;
+        font-family: var(--font-oswald), sans-serif; /* Use Oswald for description */
+    }
+    .price{
+        margin-top:20;
+        font-size: 16;
+        font-family: var(--font-oswald), sans-serif; /* Use Oswald for price */
+    }
+    .button{
+        font-family: var(--font-oswald), sans-serif; /* Use Oswald for button */
+        padding: 10px 20px; /* Adjust padding for mobile */
+        font-size: 16px; /* Smaller font size for mobile */
+        margin-top: 20px; /* Add some space above the button */
+        background-color: #3665a2; /* Adjust button color */
+        color: black; /* Button text color */
+        border-radius: 20;
     }
 }

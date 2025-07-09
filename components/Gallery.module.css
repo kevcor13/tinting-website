@@ -1,0 +1,74 @@
+/* components/ImageGallery.module.css */
+@media (max-width: 400px) {
+.galleryContainer {
+  position: relative;
+  width: 100%; /* Or a fixed width like 600px */
+  max-width: 800px; /* Max width to prevent overly large images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflowing parts of images if they are larger than wrapper */
+}
+
+.imageWrapper {
+  flex-grow: 1; /* Allows image wrapper to take available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80;
+  height: 400px; /* Fixed height for the image area, adjust as needed */
+  overflow: hidden; /* Ensure image doesn't overflow if it's too big */
+}
+
+.currentImage {
+  max-width: 80%; /* Image should not exceed its container */
+  max-height: 80%; /* Image should not exceed its container */
+  display: block; /* Remove extra space below image */
+  border-radius: 40;
+  object-fit: contain; /* Ensures the whole image is visible without cropping */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for image changes */
+}
+
+.arrowButton {
+  color: white;
+  padding: 5px 10px ; /* Adjust padding to make arrows larger/smaller */
+  cursor: pointer;
+  font-size: 2em; /* Large arrow character */
+  z-index: 10; /* Ensure arrows are above the image */
+  height: 20%; /* Make arrows span the full height of the gallery */
+  display: flex; /* Use flexbox to center arrow vertically */
+  align-items: center; /* Center arrow vertically */
+  transition: background-color 0.3s ease;
+  user-select: none; /* Prevent text selection on arrows */
+}
+
+.arrowButton:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.leftArrow {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 8px;
+}
+
+.rightArrow {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Optional: Make arrows slightly overlap the image */
+.galleryContainer {
+    /* ... existing styles ... */
+    padding: 0 40px; /* Add padding to make space for overlapping arrows */
+}
+
+.leftArrow {
+    position: absolute;
+    left: 0;
+}
+
+.rightArrow {
+    position: absolute;
+    right: 0;
+}
+}
