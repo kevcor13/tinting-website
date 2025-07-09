@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from './page.module.css'; // <--- Import your CSS module here
+import Services from '../components/Services'; // Adjust the path as necessary
 
 export default function Home() {
   return (
@@ -9,11 +10,6 @@ export default function Home() {
         {/* Your original content structure */}
         <div className={styles.centerFlexContainer}>
           <div className={styles.contentFlexColumn}>
-            <img
-              src="/assets/icons/sport-car.png" // Path relative to the `public` directory
-              alt="Company Logo" // Important for accessibility and SEO
-              className={styles.iconsContainer} // Keep specific inline styles if they are truly unique and not reusable
-            />
             <div className={styles.textAlignCen}>
               <div className={styles.bottomBorderDiv}>
                 <p className={styles.kevinsTintText}>
@@ -44,9 +40,9 @@ export default function Home() {
         alt="Full Window Tint Services"
         width={200} // Original width, acts as intrinsic size
           height={200} // Original height
-          //style={{ width: 'auto', height: 'auto' }}
       />
     </div>
+    <Services/>
     </div>
   );
 }

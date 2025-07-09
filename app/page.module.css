@@ -30,16 +30,6 @@
     align-items: center;
     justify-content: center;
 }
-.contentFlexColumn img{
-    width:180; /* Make image responsive to its container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.iconContainer{
-    display: flex;
-    height: 30;
-    width: 40;
-  }
 .textAlignCen {
     text-align: center;
 }
@@ -99,7 +89,7 @@
     }
 
     .imageOverviewContainer img {
-        border-radius: 70;
+        border-radius: 20;
         width: 100%; /* Make image responsive to its container */
         height: 80%; /* Maintain aspect ratio */
     }

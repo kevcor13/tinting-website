@@ -1,0 +1,17 @@
+@media (max-width: 400px) { 
+    .header {
+        text-align: center; /* Center the header text */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+    .titleText{
+        font-size:36px; /* Smaller title text for mobile */
+        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
+        margin-bottom: 20;
+    }
+    .header img {
+        border-radius: 40;
+        width: 100%; /* Make image responsive to its container */
+        height: 80%; /* Maintain aspect ratio */
+        padding: 20;
+    }
+}
