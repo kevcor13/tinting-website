@@ -1,136 +1,142 @@
-/* page.module.css */
+/* --- Base Mobile Styles (Default) --- */
 
-/* --- Default Styles (for larger screens / desktop first) --- */
+/* Hero Video Section */
 .imageBackgroundContainer {
-    width: 100vw;
-    height: 80vh; /* Changed to 100vh for desktop */
-    background-image: url("/assets/images/backWindow.PNG"); /* Your background image path */
-    background-size: cover; /* Cover the entire container */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
+  position: relative; /* Crucial: This anchors the absolute children */
+  height: 100vh;
+  width: 100%;
+  color: white;
+  display: flex; /* Helps center content */
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundVideo {
+  position: absolute; /* Lifts the video to the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Sits behind everything */
 }
 
 .contentOverlay {
-
-    z-index: 1;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+  position: absolute; /* Lifts the overlay above the video */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Sits above video, but below other potential content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* ✅ Correct place for the dark tint */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.centerFlexContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .textAlignCen {
-    text-align: center;
+  text-align: center;
 }
 
 .bottomBorderDiv {
-    display: inline-block;
-    border-bottom: 2px solid #FFFFFF;
+  display: inline-block;
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 5px;
 }
 
 .marginTop20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .kevinsTintText {
-    font-size: 86px; /* Default large size for desktop */
-    font-family: var(--font-hammersmith-one), sans-serif;
-    text-transform: uppercase;
-    line-height: 1; /* Adjust line-height to prevent excessive spacing */
+  font-size: 40px; /* Mobile size */
+  font-family: var(--font-hammersmith-one), sans-serif;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .carWindowTintingText {
-    font-size: 29px; /* Default size for desktop */
-    font-family: var(--font-hammersmith-one), sans-serif;
+  font-size: 20px; /* Mobile size */
+  font-family: var(--font-hammersmith-one), sans-serif;
 }
 
-/* --- Second Section Styles --- */
+
+/* Content Sections */
 .imageOverviewContainer {
-    position: relative;
-    padding: 20px;
-    margin: 20px; /* Corrected: added 'px' unit */
-    text-align: center; /* Center the image and text inside */
+  padding: 20px 15px;
+  margin: 0;
+  text-align: center;
 }
 
-/* --- Media Queries for Mobile Screens (e.g., iPhone portrait) --- */
-@media (max-width: 400px) { /* Adjust breakpoint if needed (e.g., 600px, 480px) */
+.imageOverviewContainer img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
 
-    /* Reduce font sizes for readability on smaller screens */
-    .kevinsTintText {
-        font-size: 40px; /* Significantly smaller for mobile */
-        line-height: 1.1; /* Adjust line-height again */
-    }
+.TitleText,
+.titleText,
+.galleryTitle {
+  font-size: 36px;
+  font-family: var(--font-hammersmith-one), sans-serif;
+  margin-bottom: 20px;
+}
 
-    .carWindowTintingText {
-        font-size: 20px; /* Smaller for mobile */
-    }
+.textBody,
+.galleryText {
+  font-size: 18px;
+  font-family: var(--font-oswald), sans-serif;
+}
 
-    /* Adjust negative margin or remove it if it causes issues on mobile */
-    .textAlignCen {
-        margin-top: -6 0px; /* Reduce negative margin for mobile, test this value */
-        /* Or simply: margin-top: 20px; if the negative margin is problematic */
-    }
+.textBody {
+  margin-bottom: 20px;
+}
 
-    /* Adjust image overview container for mobile */
-    .imageOverviewContainer {
-        padding: 10px; /* Less padding */
-        margin: 10px; /* Less margin */
-    }
+.header,
+.galleryHeader {
+  text-align: center;
+  margin-top: 20px;
+}
 
-    .imageOverviewContainer img {
-        border-radius: 20;
-        width: 100%; /* Make image responsive to its container */
-        height: 80%; /* Maintain aspect ratio */
-    }
-    .TitleText{
-        font-size:36px; /* Smaller title text for mobile */
-        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
-        margin-bottom: 20;
-    }
-    .textBody{
-        font-size: 20px; /* Smaller body text for mobile */
-        font-family: var(--font-oswald), sans-serif; /* Use Geist Sans for body text */
-        margin-top: 20px;
-        margin-bottom: 40px;
-    }
-    .titleText{
-        font-size:36px; /* Smaller title text for mobile */
-        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
-        margin-bottom: 20;
-    }
-    .header {
-        text-align: center; /* Center the header text */
-        margin-top: 20px; /* Add some top margin for spacing */
-    }
-    .fullGalleryContainer{
-        display: flex;       
-        justify-content: center;
-        margin-bottom: 20;
-    }
-    .galleryHeader{
-        border-top: #FFFFFF 2px solid;
-        text-align: center; /* Center the header text */
-        margin-top: 20px; /* Add some top margin for spacing */
-    }
-    .galleryTitle{
-        margin-top: 40px;
-        font-size: 36px; /* Smaller title text for mobile */
-        font-family: var(--font-hammersmith-one), sans-serif; /* Use Geist Sans for title */
-        margin-bottom: 20;
-    }
-    .galleryText{
-        font-size: 20px; /* Smaller body text for mobile */
-        font-family: var(--font-oswald), sans-serif; /* Use Geist Sans for body text */
-    }
+.galleryHeader {
+  border-top: #FFFFFF 2px solid;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.fullGalleryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 40px 0;
+}
+
+
+/* --- Desktop Styles --- */
+@media (max-width:400px) {
+  .kevinsTintText {
+    font-size: 86px; /* Larger font for desktop */
+  }
+
+  .carWindowTintingText {
+    font-size: 29px; /* Larger font for desktop */
+  }
+
+  .TitleText,
+  .titleText,
+  .contactUsText,
+  .galleryTitle {
+    font-size: 48px;
+  }
+
+  .textBody,
+  .galleryText {
+    font-size: 20px;
+  }
+  .contactUsContainer{
+    padding:0 40px
+  }
 }
